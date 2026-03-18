@@ -1,182 +1,200 @@
 # DPI Connectivity Tester (GUI)
 
-[🇷🇺 Русская версия](https://github.com/OMchik33/DPI_Connectivity_Tester/blob/main/README-RU.md)
+[![Release](https://img.shields.io/github/v/release/OMchik33/DPI_Connectivity_Tester)](https://github.com/OMchik33/DPI_Connectivity_Tester/releases)
+[![License](https://img.shields.io/badge/license-MIT-green)](#-license)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 
----
+👉 **Русская версия README:**\
+https://github.com/OMchik33/Connectivity_Tester/blob/main/README-RU.md
 
-## 🚀 DPI / Blocking / Network Diagnostics Tool
+------------------------------------------------------------------------
 
-A modern utility for detecting:
+## ⚠️ Disclaimer
 
-- DPI filtering  
-- Network restrictions  
-- DNS blocking  
-- TLS/SSL issues  
-- Website accessibility problems  
+This utility is intended **only for diagnosing network connectivity,
+traffic analysis, and infrastructure availability testing**.
 
-Now with a **full-featured GUI**, **parallel testing**, and **clear visual results**.
+The author is not responsible for misuse of this software in violation
+of laws.\
+Use it **only for legal purposes**.
 
----
+------------------------------------------------------------------------
 
-## 📸 Screenshot
+## 🧩 About
 
-<img width="1219" height="881" alt="изображение" src="https://github.com/user-attachments/assets/3050f5c8-dec7-461b-bd05-2e17c4c2b70d" />
+A powerful tool for diagnosing:
 
+-   Network restrictions\
+-   Traffic filtering (DPI)\
+-   Website accessibility issues
 
----
+Now with a full **GUI**, parallel testing, and clear result
+visualization.
 
-## ✨ Features
+------------------------------------------------------------------------
 
-- 🌐 Website & infrastructure availability check  
-- 🔎 DNS resolution test (detect blocking)  
-- 🔐 TLS 1.2 / 1.3 support check  
-- 🛡 SSL certificate validation  
-- 📡 HTTP response verification  
-- 🧠 DPI detection (first ~16KB analysis)  
-- ⚡ Parallel execution (fast testing)  
-- 🎨 Color-coded results  
-- 💬 Smart tooltips with explanations  
-- 🔍 "Show only issues" filter  
+## 🖼️ Interface Preview
 
----
+`<img width="1219" height="881" alt="image" src="https://github.com/user-attachments/assets/3050f5c8-dec7-461b-bd05-2e17c4c2b70d" />`{=html}
 
-## 🖥️ GUI Interface
+------------------------------------------------------------------------
+
+## 🚀 Features
+
+-   🌐 Website & infrastructure availability checks\
+-   🔎 DNS restriction detection\
+-   🔐 TLS (1.2 / 1.3) testing\
+-   🛡️ SSL validation\
+-   📡 HTTP availability check\
+-   🧠 DPI filtering analysis\
+-   ⚡ Parallel execution\
+-   🎨 Color-coded results\
+-   💬 Tooltips with explanations\
+-   🔍 "Show only issues" filter
+
+------------------------------------------------------------------------
+
+## 🖥️ GUI
 
 ### Controls
 
-| Button | Description |
-|--------|------------|
-| **Standard Check** | Run built-in list |
-| **My List** | Run your custom list |
-| **Stop Test** | Stop execution |
+-   **Standard Check** --- run built-in list\
+-   **My List** --- run custom list\
+-   **Stop Test** --- stop execution
 
-### Result Status Colors
+### Results Table
 
-| Color | Meaning |
-|------|--------|
-| 🟢 | Available |
-| 🟡 | Restricted / Partial |
-| 🔴 | Problem |
+  Status   Meaning
+  -------- ----------------------
+  🟢       Available
+  🟡       Restricted / Partial
+  🔴       Connection Problem
 
 Hover over cells to see detailed explanations.
 
----
+------------------------------------------------------------------------
 
 ## 📄 Custom Site List
 
-File: `user_sites.txt`  
-Created automatically
+File: `user_sites.txt`\
+Created automatically next to the EXE.
 
-### Supported formats:
+### Supported formats
 
-```
-site.com
-site.com:771
-https://site.com
-https://site.com/path
-https://site.com/file.ext
-```
+    site.com
+    site.com:771
+    https://site.com
+    https://site.com/path
+    https://site.com/file.ext
 
-### Recommendations
+### Tips
 
-- Use **domain** → for general checks  
-- Use **full URL** → for precise testing  
+-   Use **domain** → general testing\
+-   Use **full URL** → precise diagnostics
 
----
+------------------------------------------------------------------------
 
-## 🌐 Default Test List
+## 🌐 Built-in Test List
 
-Includes major providers and infrastructure:
+Includes stable global services:
 
-- YouTube  
-- GitHub  
-- Microsoft  
-- Cloudflare  
-- AWS  
-- Hetzner  
-- OVH  
-- DigitalOcean  
-- Vultr  
-- Fastly  
-- Google Cloud  
+-   YouTube\
+-   GitHub\
+-   Microsoft\
+-   Cloudflare\
+-   AWS\
+-   Hetzner\
+-   OVH\
+-   DigitalOcean\
+-   Vultr\
+-   Fastly\
+-   Google Cloud
 
-Focus: **stable domains**, not temporary files.
-
----
+------------------------------------------------------------------------
 
 ## 🔍 Test Types
 
-| Test | Description |
-|------|------------|
-| DNS | Domain → IP resolution |
-| TLS | TLS 1.2 / 1.3 support |
-| SSL | Certificate validation |
-| HTTP | HTTP response |
-| DPI | Deep packet inspection detection |
+### DNS
 
----
+Checks if domain resolves to IP.
+
+### TLS
+
+Tests TLS 1.2 / 1.3.
+
+### SSL
+
+Validates certificate and connection.
+
+### HTTP
+
+Checks HTTP response.
+
+### DPI Analysis
+
+Analyzes first \~16KB of response.
+
+------------------------------------------------------------------------
 
 ## ⚠️ Statuses
 
-| Status | Meaning |
-|--------|--------|
-| Available | Everything works |
-| Restricted | Partial issues |
-| Problem | Block or error |
+  Status       Description
+  ------------ -------------------------------
+  Available    Everything works
+  Restricted   Partial issues
+  Problem      Connection or filtering error
 
-### Additional states
+Additional:
 
-- `Not tested (HTTP XXX)` — server returned error  
-- `Not tested (<16 KB ...)` — not enough data for DPI  
+-   `Not checked (HTTP XXX)`\
+-   `Not checked (<16 KB ...)`
 
----
+------------------------------------------------------------------------
 
-## 📍 Location Detection
+## 📍 Geolocation
 
-Uses external geo-IP services.
+Uses external services.
 
 Limitations:
 
-- Some IPs cannot be resolved  
-- CDN may return inaccurate locations  
+-   Some IPs cannot be detected\
+-   CDN may return inaccurate location
 
----
+------------------------------------------------------------------------
 
 ## 🧠 Tooltips
 
-Hover over results to see:
+Shows:
 
-- error reasons  
-- decoded statuses  
-- final verdict  
+-   Error causes\
+-   Status explanation\
+-   Final verdict
 
----
+------------------------------------------------------------------------
 
 ## ⚙️ Build EXE
 
-```
-python -m PyInstaller --noconfirm --clean --onefile --windowed --name DPIConnectivityTester main.py
-```
+    python -m PyInstaller --noconfirm --clean --onefile --windowed --name DPIConnectivityTester main.py
 
----
+------------------------------------------------------------------------
 
 ## 📦 Dependencies
 
-```
-requests
-dnspython
-```
+    requests
+    dnspython
 
----
+------------------------------------------------------------------------
 
 ## 💡 Notes
 
-- Tests run in parallel (thread-limited)  
-- DPI test may fail on small responses  
-- Results may vary by ISP/region  
+-   Parallel tests with thread limits\
+-   DPI analysis may fail on small pages\
+-   Results depend on ISP / region
 
----
+------------------------------------------------------------------------
 
 ## 📜 License
 
 MIT License
+
+Use responsibly and in accordance with your local laws.
