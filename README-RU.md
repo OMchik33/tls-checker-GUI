@@ -7,7 +7,7 @@
 Теперь с полноценным графическим интерфейсом (GUI), параллельными проверками и удобной визуализацией результатов.
 
 ---
-<img width="1219" height="881" alt="изображение" src="https://github.com/user-attachments/assets/3050f5c8-dec7-461b-bd05-2e17c4c2b70d" />
+<img width="1221" height="879" alt="изображение" src="https://github.com/user-attachments/assets/08f6d306-ba5e-44ab-9bf3-ef926f023144" />
 
 ---
 
