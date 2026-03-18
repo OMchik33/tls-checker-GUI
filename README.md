@@ -64,7 +64,7 @@ Hover over cells to see detailed explanations.
 ## 📄 Custom Site List
 
 File: `user_sites.txt`  
-Created automatically рядом с EXE.
+Created automatically
 
 ### Supported formats:
 
