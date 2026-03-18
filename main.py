@@ -19,7 +19,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 APP_TITLE = "Connectivity Tester"
-APP_VERSION = "v5.5"
+APP_VERSION = "v5.4"
 TIMEOUT = 10
 MAX_WORKERS = 4
 USER_AGENT = (
