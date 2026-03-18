@@ -44,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: DPIConnectivityTester-windows
-          path: dist/DPIConnectivityTester5.3.exe
+          path: dist/DPIConnectivityTester.exe
           if-no-files-found: error
