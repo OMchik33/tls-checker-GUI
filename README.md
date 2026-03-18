@@ -1,57 +1,72 @@
 # DPI Connectivity Tester (GUI)
 
-Утилита для диагностики сетевых ограничений, DPI, блокировок и проблем с доступом к сайтам.
-
-Теперь с полноценным графическим интерфейсом (GUI), параллельными проверками и удобной визуализацией результатов.
-
----
-<img width="1118" height="749" alt="изображение" src="https://github.com/user-attachments/assets/058c79d6-94df-4980-9b0f-61b80a8d20bb" />
-
+[🇷🇺 Русская версия](https://github.com/OMchik33/DPI_Connectivity_Tester/blob/main/README-RU.md)
 
 ---
 
-## 🚀 Возможности
+## 🚀 DPI / Blocking / Network Diagnostics Tool
 
-* Проверка доступности сайтов и инфраструктуры
-* Определение DNS-блокировок
-* Проверка TLS (1.2 / 1.3)
-* Проверка SSL-соединения
-* HTTP-доступ
-* DPI-анализ (по первым ~16KB ответа)
-* Параллельное выполнение тестов
-* Цветовая индикация результатов
-* Всплывающие подсказки с расшифровкой ошибок
-* Фильтр "показать только проблемы"
+A modern utility for detecting:
 
----
+- DPI filtering  
+- Network restrictions  
+- DNS blocking  
+- TLS/SSL issues  
+- Website accessibility problems  
 
-## 🖥️ GUI-интерфейс
-
-### Основные элементы:
-
-* **Стандартная проверка** — запуск встроенного списка сайтов
-* **Мой список** — запуск пользовательского списка
-* **Остановить тест** — остановка выполнения
-
-### Таблица результатов:
-
-Цвета:
-
-* 🟢 Доступен
-* 🟡 Ограничен / частично доступен
-* 🔴 Проблема
-
-При наведении на ячейки отображаются подсказки с пояснениями.
+Now with a **full-featured GUI**, **parallel testing**, and **clear visual results**.
 
 ---
 
-## 📄 Мой список сайтов
+## 📸 Screenshot
 
-Файл: `user_sites.txt`
+<img width="1118" height="749" alt="GUI Screenshot" src="https://github.com/user-attachments/assets/058c79d6-94df-4980-9b0f-61b80a8d20bb" />
 
-Создаётся автоматически рядом с EXE.
+---
 
-Поддерживаемые форматы:
+## ✨ Features
+
+- 🌐 Website & infrastructure availability check  
+- 🔎 DNS resolution test (detect blocking)  
+- 🔐 TLS 1.2 / 1.3 support check  
+- 🛡 SSL certificate validation  
+- 📡 HTTP response verification  
+- 🧠 DPI detection (first ~16KB analysis)  
+- ⚡ Parallel execution (fast testing)  
+- 🎨 Color-coded results  
+- 💬 Smart tooltips with explanations  
+- 🔍 "Show only issues" filter  
+
+---
+
+## 🖥️ GUI Interface
+
+### Controls
+
+| Button | Description |
+|--------|------------|
+| **Standard Check** | Run built-in list |
+| **My List** | Run your custom list |
+| **Stop Test** | Stop execution |
+
+### Result Status Colors
+
+| Color | Meaning |
+|------|--------|
+| 🟢 | Available |
+| 🟡 | Restricted / Partial |
+| 🔴 | Problem |
+
+Hover over cells to see detailed explanations.
+
+---
+
+## 📄 Custom Site List
+
+File: `user_sites.txt`  
+Created automatically рядом с EXE.
+
+### Supported formats:
 
 ```
 site.com
@@ -61,92 +76,82 @@ https://site.com/path
 https://site.com/file.ext
 ```
 
-Рекомендации:
+### Recommendations
 
-* Для общей проверки — использовать домен
-* Для точечной проверки — URL с путём
-
----
-
-## 🌐 Стандартный список
-
-Содержит популярные сервисы и инфраструктуру:
-
-* YouTube
-* GitHub
-* Microsoft
-* Cloudflare
-* AWS
-* Hetzner
-* OVH
-* DigitalOcean
-* Vultr
-* Fastly
-* Google Cloud
-
-Список ориентирован на стабильные домены, а не временные файлы.
+- Use **domain** → for general checks  
+- Use **full URL** → for precise testing  
 
 ---
 
-## 🔍 Типы проверок
+## 🌐 Default Test List
 
-### DNS
+Includes major providers and infrastructure:
 
-Проверяет, разрешается ли домен в IP.
+- YouTube  
+- GitHub  
+- Microsoft  
+- Cloudflare  
+- AWS  
+- Hetzner  
+- OVH  
+- DigitalOcean  
+- Vultr  
+- Fastly  
+- Google Cloud  
 
-### TLS
-
-Проверка TLS 1.3 и TLS 1.2.
-
-### SSL
-
-Проверка SSL-соединения и сертификата.
-
-### HTTP
-
-Проверка HTTP-ответа.
-
-### DPI
-
-Анализ первых ~16KB ответа.
+Focus: **stable domains**, not temporary files.
 
 ---
 
-## ⚠️ Статусы
+## 🔍 Test Types
 
-* `Доступен` — всё работает
-* `Ограничен` — частичные проблемы
-* `Проблема` — блокировка или ошибка
-
-Дополнительно:
-
-* `Не проверено (HTTP XXX)` — сервер вернул код ошибки
-* `Не проверено (<16 KB ...)` — недостаточно данных для DPI
-
----
-
-## 📍 Определение локации
-
-Используются внешние сервисы геолокации.
-
-Возможны ограничения:
-
-* не все IP определяются
-* CDN может давать неточные данные
+| Test | Description |
+|------|------------|
+| DNS | Domain → IP resolution |
+| TLS | TLS 1.2 / 1.3 support |
+| SSL | Certificate validation |
+| HTTP | HTTP response |
+| DPI | Deep packet inspection detection |
 
 ---
 
-## 🧠 Подсказки
+## ⚠️ Statuses
 
-При наведении показываются:
+| Status | Meaning |
+|--------|--------|
+| Available | Everything works |
+| Restricted | Partial issues |
+| Problem | Block or error |
 
-* причины ошибок
-* расшифровка статусов
-* итоговый вердикт
+### Additional states
+
+- `Not tested (HTTP XXX)` — server returned error  
+- `Not tested (<16 KB ...)` — not enough data for DPI  
 
 ---
 
-## ⚙️ Сборка EXE
+## 📍 Location Detection
+
+Uses external geo-IP services.
+
+Limitations:
+
+- Some IPs cannot be resolved  
+- CDN may return inaccurate locations  
+
+---
+
+## 🧠 Tooltips
+
+Hover over results to see:
+
+- error reasons  
+- decoded statuses  
+- final verdict  
+
+---
+
+## ⚙️ Build EXE
 
 ```
 python -m PyInstaller --noconfirm --clean --onefile --windowed --name DPIConnectivityTester tester_gui_5.3.py
@@ -154,7 +159,7 @@ python -m PyInstaller --noconfirm --clean --onefile --windowed --name DPIConnect
 
 ---
 
-## 📦 Зависимости
+## 📦 Dependencies
 
 ```
 requests
@@ -163,14 +168,14 @@ dnspython
 
 ---
 
-## 💡 Примечания
+## 💡 Notes
 
-* Проверки выполняются параллельно, но с ограничением потоков
-* DPI-тест не всегда возможен на маленьких страницах
-* Некоторые ошибки могут зависеть от провайдера или региона
+- Tests run in parallel (thread-limited)  
+- DPI test may fail on small responses  
+- Results may vary by ISP/region  
 
 ---
 
-## 📜 Лицензия
+## 📜 License
 
 MIT License
